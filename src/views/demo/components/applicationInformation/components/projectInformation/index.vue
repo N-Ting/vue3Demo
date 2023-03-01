@@ -3,8 +3,8 @@
     <n-alert title="温馨提示：" type="warning"> 1.验收备案信息均为信息查看，并没有操作选项</n-alert>
     <div class="declaration-info">
       <h3>1.1 申报信息</h3>
-      <firstTable :table-data="tableData" />
-      <!-- <table border-collapse>
+      <!-- <firstTable :table-data="tableData" /> -->
+      <table border-collapse>
         <tr>
           <td class="title">事项名称：</td>
           <td class="content">建设工程消防验收</td>
@@ -21,7 +21,7 @@
             顺义区仁和镇临河村棚户区改造土地开发B片区项目（东城安置房）6017地块项目（17-4#住宅楼（东城安置房）等9项）
           </td>
         </tr>
-      </table> -->
+      </table>
     </div>
     <div class="declaration-info">
       <h3>1.2 申请人信息</h3>

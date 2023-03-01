@@ -1,57 +1,29 @@
 <template>
   <div class="pr-container">
-    <n-form
-      ref="formRef"
-      :model="model"
-      :rules="rules"
-      label-placement="left"
-      label-width="auto"
-      require-mark-placement="right-hanging"
-      :size="size"
-    >
-      <n-row gutter="12">
-        <n-col :span="18">
-          <n-grid x-gap="12" :cols="3">
-            <n-gi>
-              <n-form-item label="受理编号" path="inputValue">
-                <n-input />
-              </n-form-item>
-            </n-gi>
-            <n-gi>
-              <n-form-item label="工程名称" path="inputValue">
-                <n-input />
-              </n-form-item>
-            </n-gi>
-            <n-gi>
-              <n-form-item label="建设单位" path="inputValue">
-                <n-input />
-              </n-form-item>
-            </n-gi>
-          </n-grid>
-          <n-grid x-gap="12" :cols="3">
-            <n-gi>
-              <n-form-item label="使用性质" path="inputValue">
-                <n-input />
-              </n-form-item>
-            </n-gi>
-            <n-gi>
-              <n-form-item label="施工许可证号" path="inputValue">
-                <n-input />
-              </n-form-item>
-            </n-gi>
-            <n-gi>
-              <n-form-item label="状态" path="inputValue">
-                <n-input />
-              </n-form-item>
-            </n-gi>
-          </n-grid>
-        </n-col>
-        <n-col :span="6" class="searchBtn">
-          <n-button size="medium" attr-type="button" @click="handleValidateClick"> 查询 </n-button>
-          <n-button size="medium" attr-type="button" @click="handleValidateClick"> 重置 </n-button>
-        </n-col>
-      </n-row>
-    </n-form>
+    <n-search>
+      <nt-form-item label="受理编号" :span="8" path="">
+        <n-input />
+      </nt-form-item>
+      <nt-form-item label="工程名称" :span="8">
+        <n-input />
+      </nt-form-item>
+      <nt-form-item label="建设单位" :span="8">
+        <n-input />
+      </nt-form-item>
+      <nt-form-item label="使用性质" :span="8">
+        <n-input />
+      </nt-form-item>
+      <nt-form-item label="施工许可证号" :span="8">
+        <n-input />
+      </nt-form-item>
+      <nt-form-item label="状态" :span="8">
+        <n-input />
+      </nt-form-item>
+
+      <template #addBtn>
+        <n-button size="medium" attr-type="button" @click="handleValidateClick">新增</n-button>
+      </template>
+    </n-search>
     <div>
       <card-ex :card-list="cardList" :steps-list="stepsList"></card-ex>
     </div>
@@ -60,8 +32,10 @@
 
 <script setup>
 import CardEx from '@/components/CardEx/index.vue'
+// import NSearch from '@/components/NSearch/index.vue'
+// import NtFormItem from '@/components/NtFormItem/index.vue'
 import { reactive, ref, computed } from 'vue'
-const size = ref('medium')
+
 const cardList = reactive([
   {
     title: '某某市未来科技院南区C-201地块', //标题
@@ -89,25 +63,11 @@ const stepsList = reactive([
 ])
 const currentRef = ref(1)
 const currentStatusRef = ref('finish')
-
-const buttonTypeRef = computed(() => {
-  switch (currentStatusRef.value) {
-    case 'error':
-      return 'error'
-    case 'finish':
-      return 'success'
-    default:
-      return 'default'
-  }
-})
-
 const current = currentRef
 const currentStatus = currentStatusRef
 function handleButtonClick() {
   currentRef.value = (currentRef.value % 4) + 1
 }
-const buttonType = buttonTypeRef
-function handleValidateClick(e) {}
 </script>
 
 <style lang="scss" scoped>

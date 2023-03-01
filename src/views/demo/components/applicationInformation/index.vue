@@ -3,10 +3,10 @@
     <n-collapse-item title="1 项目信息" name="1">
       <projectInformation />
     </n-collapse-item>
-    <n-collapse-item title="红灯" name="2">
+    <n-collapse-item title="2 申请内容" name="2">
       <div>停</div>
     </n-collapse-item>
-    <n-collapse-item title="黄灯" name="3">
+    <n-collapse-item title="3 附件材料" name="3">
       <div>注意</div>
     </n-collapse-item>
   </n-collapse>
