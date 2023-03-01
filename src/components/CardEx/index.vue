@@ -74,7 +74,7 @@
 </template>
 
 <script setup>
-import { defineProps, onMounted, ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 const props = defineProps({
   // 卡片数据
@@ -106,7 +106,7 @@ onMounted(() => {})
 </script>
 
 <style lang="scss" scoped>
-::v-deep.card-container {
+:deep(.card-container) {
   .n-tag {
     margin-right: 10px;
     .n-tag__content {

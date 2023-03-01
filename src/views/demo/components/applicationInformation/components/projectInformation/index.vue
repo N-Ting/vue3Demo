@@ -136,7 +136,7 @@ const tableData = ref([
 </script>
 
 <style lang="scss" scoped>
-::v-deep.declaration-info {
+:deep(.declaration-info) {
   margin-top: 30px;
   table {
     margin-top: 30px;

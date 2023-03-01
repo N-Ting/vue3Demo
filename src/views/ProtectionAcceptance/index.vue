@@ -32,7 +32,7 @@
 
 <script setup>
 import CardEx from '@/components/CardEx/index.vue'
-// import NSearch from '@/components/NSearch/index.vue'
+import NSearch from '@/components/NSearch/index.vue'
 // import NtFormItem from '@/components/NtFormItem/index.vue'
 import { reactive, ref, computed } from 'vue'
 
@@ -71,7 +71,7 @@ function handleButtonClick() {
 </script>
 
 <style lang="scss" scoped>
-::v-deep.pr-container {
+:deep(.pr-container) {
   padding: 0 100px;
   .n-card-header__main {
     font-family: '微软雅黑 Bold', '微软雅黑 Regular', '微软雅黑';

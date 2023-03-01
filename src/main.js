@@ -7,7 +7,6 @@ import { setupBlackbox } from 'blackbox-ui'
 import App from './app.vue'
 import 'virtual:svg-icons-register'
 import NComponent from './components/index.js'
-console.log(NComponent, 'NComponent')
 const app = createApp(App)
 app.use(NComponent)
 setupPinia(app)

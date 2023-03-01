@@ -76,7 +76,7 @@ onMounted(() => {})
 </script>
 
 <style lang="scss" scoped>
-::v-deep.layout-content {
+:deep(.layout-content) {
   .n-layout-header {
     height: 121px;
     // padding: 24px;
