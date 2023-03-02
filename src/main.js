@@ -8,6 +8,7 @@ import App from './app.vue'
 import 'virtual:svg-icons-register'
 import NComponent from './components/index.js'
 const app = createApp(App)
+console.log(NComponent)
 app.use(NComponent)
 setupPinia(app)
 setupRouter(app)

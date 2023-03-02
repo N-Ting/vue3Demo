@@ -1,6 +1,6 @@
 <template>
   <div class="pr-container">
-    <n-search>
+    <nt-search>
       <nt-form-item label="受理编号" :span="8" path="">
         <n-input />
       </nt-form-item>
@@ -23,7 +23,7 @@
       <template #addBtn>
         <n-button size="medium" attr-type="button" @click="handleValidateClick">新增</n-button>
       </template>
-    </n-search>
+    </nt-search>
     <div>
       <card-ex :card-list="cardList" :steps-list="stepsList"></card-ex>
     </div>
@@ -32,9 +32,9 @@
 
 <script setup>
 import CardEx from '@/components/CardEx/index.vue'
-import NSearch from '@/components/NSearch/index.vue'
+// import NSearch from '@/components/NSearch/index.vue'
 // import NtFormItem from '@/components/NtFormItem/index.vue'
-import { reactive, ref, computed } from 'vue'
+import { reactive, ref } from 'vue'
 
 const cardList = reactive([
   {

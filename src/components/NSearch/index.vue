@@ -22,12 +22,11 @@
 
 <script>
 export default {
-  name: 'NSearch',
+  name: 'NtSearch',
 }
 </script>
 
 <script setup>
-import NtFormItem from '@/components/NtFormItem/index.vue'
 import { reactive, ref } from 'vue'
 
 const size = ref('medium')
